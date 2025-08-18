@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1. Student Report
+    let student = {
+        name: "Oware Kwadjo Offei",
+        age: 13,
+        grade: "6",
+        subjects: ["Mathematics", "Integrated Science", "English", "Social Studies"]
+    };
+
+    console.log("Student Name:", student.name);
+
+    console.log("Subjects:", student.subjects);
+
+    // 2. online store product
+    let product = {
+        name: "BMW i8 coupe",
+        price: 750640,
+        stock: 3,
+        category: "Automobile"
+    };
+
+    
+    function buy(quantity) {
+        if (quantity <= product.stock) {
+            product.stock -= quantity;
+            console.log(`${quantity} ${product.name}(s) purchased successfully.`);
+            console.log(`Remaining stock: ${product.stock}`);
+        } else {
+            console.log("Not enough stock available.");
+        }
+    }
+
+    buy(3); 
+    buy(8);
+
+    // 3. Car rental system
+    let cars = [
+        { brand: "BMW", model: "M5 competetion", year: 2024, available: true },
+        { brand: "BMW", model: "X6m competetion", year: 2025, available: false },
+        { brand: "BMW", model: "M8 competetion", year: 2024, available: true }
+    ];
+
+    function rentCar(model) {
+        let car = cars.find(carsHub => carsHub.model === model); 
+        
+        if (car) {
+            if (car.available) {
+                car.available = false;
+                console.log(`${car.brand} ${car.model} has been rented successfully. Enjoy your ride😎`);
+            } else {
+                console.log(`${car.brand} ${car.model} is already rented.`);
+            }
+        } else {
+            console.log("We only deal with German Monsters not German Pets😂.");
+        }
+    }
+
+    rentCar("X6m competetion");
+    rentCar("M8 competetion");
+    rentCar("M5 competetion");
+    rentCar("M8 competetion");
+    rentCar("C250"); 
+
+</script>
+</html>
