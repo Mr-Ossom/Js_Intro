@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/736x/ae/4d/15/ae4d15b74a7c6d83859bb63a2701aba7.jpg" id="myImage">
+
+    <button onclick="myFunction()" id="button">Click me</button>
+    <script>
+        let changes = document.getElementById("myImage")
+        changes.src = "https://i.pinimg.com/736x/46/4c/2f/464c2f759177bf90c5ab9d4b8a0c64ec.jpg"
+
+        function myFunction(){
+            alert("This button has been clicked")
+        }
+    </script>
+</body>
+</html>
