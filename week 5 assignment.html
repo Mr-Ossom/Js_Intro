@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Module</title>
+</head>
+<body>
+    <h1 id="heading1">DOM assignment</h1>
+
+    <h1 id="heading2">Men at work</h1>
+
+    <h1 id="heading3">Speed Up. Dont slow down</h1>
+
+    <button onclick="myFunction()">Click Me</button>
+    
+    <button id="randomBtn" onclick="myFunction2()">Click to see wonders</button>
+
+    <script>
+        const heading = document.getElementById("heading1")
+        heading.innerHTML = "This text is from the javascript"
+
+        document.getElementById("heading2").innerHTML = "Those working here are on break!"
+
+        document.getElementById("heading3").innerHTML = "slow down at your own risk"
+
+        function myFunction(){
+            alert('You clicked the wrong button!')
+        }
+
+        function myFunction2(){
+          
+           const body = document.getElementById("randomBtn");
+
+        randomBtn.addEventListener("click", () => {
+            
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+        }
+    </script>
+</body>
+</html>
